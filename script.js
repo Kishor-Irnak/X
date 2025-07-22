@@ -1,9 +1,7 @@
 // CAMERA BUTTON FUNCTION
 document.getElementById('camera-btn').addEventListener('click', async () => {
   const video = document.getElementById('camera-feed');
-  const image = document.getElementById('selected-image');
-  image.classList.add('hidden'); // Hide image if shown before
-
+  
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ video: true });
     video.srcObject = stream;
