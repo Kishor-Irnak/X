@@ -1,16 +1,3 @@
-// CAMERA BUTTON FUNCTION
-document.getElementById('camera-btn').addEventListener('click', async () => {
-  const video = document.getElementById('camera-feed');
-  
-  try {
-    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-    video.srcObject = stream;
-    video.classList.remove('hidden');
-  } catch (err) {
-    alert('Camera access denied or not available.');
-    console.error(err);
-  }
-});
 
 // GALLERY BUTTON FUNCTION
 document.getElementById('gallery-btn').addEventListener('click', () => {
